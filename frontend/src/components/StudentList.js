@@ -7,7 +7,7 @@ const StudentList = () => {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/students')
+    axios.get('https://assignment-backend-8pd1.onrender.com/students')
       .then(res => setStudents(res.data))
       .catch(console.error);
   }, []);
@@ -15,7 +15,7 @@ const StudentList = () => {
   const deleteStudent = (id) => {
     const confirmDelete = window.confirm('Are you sure you want to delete this student?');
     if (confirmDelete) {
-      axios.delete(`http://localhost:5000/students/${id}`)
+      axios.delete(`https://assignment-backend-8pd1.onrender.com/students/${id}`)
         .then(() => setStudents(prev => prev.filter(s => s._id !== id)))
         .catch(console.error);
     }

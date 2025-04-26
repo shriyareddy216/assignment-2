@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Use the MongoDB connection string from the .env file
 mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('✅ Connected to MongoDB'))
+  .then(() => console.log('✅ Connected to MongoDB atlas'))
   .catch(err => console.error('❌ DB Error:', err));
 
 app.use('/students', studentRoutes);

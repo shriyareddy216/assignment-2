@@ -25,7 +25,7 @@ const AddStudent = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    axios.post('http://localhost:5000/students', form)
+    axios.post('https://assignment-backend-8pd1.onrender.com/students', form)
       .then(() => navigate('/view'))
       .catch(err => {
         console.error('Submit failed:', err);
