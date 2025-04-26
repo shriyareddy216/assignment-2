@@ -16,7 +16,7 @@ const EditStudent = () => {
   });
 
   useEffect(() => {
-    axios.get(`https://assignment-backend-6xq9.onrender.com/students/${id}`)
+    axios.get(`http://localhost:5000/students/${id}`)
       .then(res => setForm(res.data))
       .catch(err => console.error('Failed to fetch student:', err));
   }, [id]);
@@ -31,7 +31,7 @@ const EditStudent = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    axios.put(`https://assignment-backend-6xq9.onrender.com/students/${id}`, form)
+    axios.put(`http://localhost:5000/students/${id}`, form)
       .then(() => navigate('/view'))
       .catch(err => {
         console.error('Update failed:', err);
