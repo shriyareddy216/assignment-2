@@ -1,0 +1,98 @@
+/* Container */
+.student-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Header section */
+  .student-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Add button */
+  .add-button {
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Table */
+  .student-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Table headers */
+  .student-table thead tr {
+    background-color: #f1f5f9;
+    text-align: left;
+  }
+  
+  .student-table th,
+  .student-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Email link */
+  .email-link {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  /* Center checkbox */
+  .checkbox-center {
+    text-align: center;
+  }
+  
+  /* No data */
+  .no-data {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+  }
+  
+  /* Action buttons */
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Edit button */
+  .edit-button {
+    border: 2px solid #6a0dad;
+    color: #6a0dad;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: white;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  
+  /* Delete button */
+  .delete-button {
+    border: 2px solid #d9534f;
+    color: #d9534f;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: white;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .table-fluid {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+  }

@@ -1,0 +1,258 @@
+/* GLOBAL SETTINGS */
+:root {
+  --brand-purple: #5b36f2;
+  --brand-purple-light: #7e61ff;
+  --bg-light: #f5f7fa;
+  --surface: #ffffff;
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  --border: #dfe6e9;
+  --danger: #e17055;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #eef2ff, #f8f9ff);
+  color: var(--text-primary);
+}
+
+/* NAVIGATION BAR (already in Home.css if you want) */
+.navbar {
+  width: 100%;
+  background: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--brand-purple);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+}
+
+.nav-link:hover {
+  color: var(--brand-purple);
+}
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+/* ADD STUDENT BUTTON */
+.add-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+/* TABLE SETTINGS - UPDATED */
+.table-wrapper {
+  width: 100%;
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  font-size: 0.9rem; /* Smaller text */
+}
+
+thead {
+  background: #f4f6fb;
+}
+
+th, td {
+  padding: 10px 14px; /* Slightly bigger and consistent padding */
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+th:first-child,
+td:first-child,
+th:nth-child(8),
+td:nth-child(8) {
+  text-align: center; /* Center ID and Active columns */
+}
+
+tbody tr:nth-child(odd) {
+  background: #fafbfc;
+}
+
+tbody tr:hover {
+  background: #f1f1f5;
+}
+
+/* BUTTONS INSIDE TABLE */
+.btn {
+  display: inline-block;
+  padding: 4px 10px; /* Smaller padding */
+  border-radius: 6px;
+  font-size: 0.8rem; /* Smaller font */
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--brand-purple);
+  color: var(--brand-purple);
+}
+
+.btn-outline:hover {
+  background: var(--brand-purple);
+  color: #fff;
+}
+
+.btn-delete {
+  background: transparent;
+  border: 2px solid var(--danger);
+  color: var(--danger);
+  margin-left: 6px;
+}
+
+.btn-delete:hover {
+  background: var(--danger);
+  color: white;
+}
+
+
+/* BUTTONS INSIDE TABLE */
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--brand-purple);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--brand-purple-light);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--brand-purple);
+  color: var(--brand-purple);
+}
+
+.btn-outline:hover {
+  background: var(--brand-purple);
+  color: #fff;
+}
+
+.btn-delete {
+  background: transparent;
+  border: 2px solid var(--danger);
+  color: var(--danger);
+  margin-left: 8px;
+}
+
+.btn-delete:hover {
+  background: var(--danger);
+  color: white;
+}
+
+/* FORM SETTINGS */
+.form {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+.form h2 {
+  margin-bottom: 1.5rem;
+  color: var(--brand-purple);
+  font-size: 1.75rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="number"],
+.form input[type="date"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.form label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form .checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form .checkbox-group input {
+  margin-right: 0.5rem;
+}
+
+.form button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--brand-purple);
+  color: #fff;
+}
+
+.form button:hover {
+  background: var(--brand-purple-light);
+}
